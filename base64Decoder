@@ -1,0 +1,9 @@
+import base64
+
+from IPython.display import Image
+coded_string = input("Paste your Base64: ")
+
+decoded_data = base64.b64decode(coded_string)
+img_file = open('image.jpeg', 'wb')
+img_file.write(decoded_data)
+img_file.close()
